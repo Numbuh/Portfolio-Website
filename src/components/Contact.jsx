@@ -23,6 +23,11 @@ const Contact = () => {
     e.preventDefault()
     setIsSubmitting(true)
     
+    // Check if we're on Netlify or local
+    const isNetlify = window.location.hostname.includes('netlify.app') || 
+                      window.location.hostname.includes('netlify.com') ||
+                      process.env.NODE_ENV === 'production'
+    
     // Netlify Forms automatically handles submission
     // Just encode the form data
     const formDataToSubmit = new FormData(e.target)
@@ -34,17 +39,25 @@ const Contact = () => {
         body: new URLSearchParams(formDataToSubmit).toString()
       })
 
-      if (response.ok) {
+      if (response.ok || response.status === 200 || response.status === 302) {
         setIsSubmitting(false)
         setSubmitStatus('success')
         setFormData({ name: '', email: '', message: '' })
         setTimeout(() => setSubmitStatus(null), 5000)
       } else {
-        throw new Error('Form submission failed')
+        console.error('Form submission failed:', response.status, response.statusText)
+        throw new Error(`Form submission failed with status: ${response.status}`)
       }
     } catch (error) {
+      console.error('Error submitting form:', error)
       setIsSubmitting(false)
-      setSubmitStatus('error')
+      
+      // Show different message if testing locally
+      if (!isNetlify && window.location.hostname === 'localhost') {
+        setSubmitStatus('local-error')
+      } else {
+        setSubmitStatus('error')
+      }
       setTimeout(() => setSubmitStatus(null), 5000)
     }
   }
@@ -192,6 +205,15 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
               >
                 Sorry, there was an error sending your message. Please try again or email me directly.
+              </motion.div>
+            )}
+            {submitStatus === 'local-error' && (
+              <motion.div 
+                className="form-error"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                ⚠️ Netlify Forms only work when deployed to Netlify. The form will work once you deploy your site. For now, please email me directly using the email link above.
               </motion.div>
             )}
           </motion.form>

@@ -60,11 +60,13 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h1 className="hero-title">
-            <span className="text-gradient">Passionate</span>{' '}
-            <span className="typing-text">
-              {typingText}
-              <span className="cursor">|</span>
-            </span>
+            <span className="text-gradient">Passionate</span>
+            <div className="typing-container">
+              <span className="typing-text">
+                {typingText}
+                <span className="cursor">|</span>
+              </span>
+            </div>
           </h1>
           <motion.p 
             className="hero-subtitle"
