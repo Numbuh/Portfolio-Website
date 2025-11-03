@@ -23,21 +23,38 @@ const Contact = () => {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    setTimeout(() => {
+    // Netlify Forms automatically handles submission
+    // Just encode the form data
+    const formDataToSubmit = new FormData(e.target)
+    
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formDataToSubmit).toString()
+      })
+
+      if (response.ok) {
+        setIsSubmitting(false)
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+        setTimeout(() => setSubmitStatus(null), 5000)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
       setIsSubmitting(false)
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', message: '' })
-      setTimeout(() => setSubmitStatus(null), 3000)
-    }, 1000)
+      setSubmitStatus('error')
+      setTimeout(() => setSubmitStatus(null), 5000)
+    }
   }
 
   const contactMethods = [
     {
       icon: <FaEnvelope />,
       label: 'Email',
-      value: 'hello@example.com',
-      href: 'mailto:hello@example.com'
+      value: 'deckerdev00@gmail.com', // Update with your actual email
+      href: 'mailto:deckerdev00@gmail.com' // Update with your actual email
     },
     {
       icon: <FaLinkedin />,
@@ -98,12 +115,26 @@ const Contact = () => {
           </motion.div>
           <motion.form 
             className="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
+            {/* Hidden field for Netlify form recognition */}
+            <input type="hidden" name="form-name" value="contact" />
+            
+            {/* Honeypot field for spam protection */}
+            <div style={{ display: 'none' }}>
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </div>
+            
             <div className="form-group">
               <input
                 type="text"
@@ -151,7 +182,16 @@ const Contact = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                Thank you! Your message has been sent.
+                Thank you! Your message has been sent. I'll get back to you soon!
+              </motion.div>
+            )}
+            {submitStatus === 'error' && (
+              <motion.div 
+                className="form-error"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                Sorry, there was an error sending your message. Please try again or email me directly.
               </motion.div>
             )}
           </motion.form>
