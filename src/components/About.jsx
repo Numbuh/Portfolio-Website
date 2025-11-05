@@ -58,13 +58,10 @@ const About = () => {
         >
           <motion.div className="about-text" variants={itemVariants}>
             <p>
-              I'm a passionate designer and developer who loves creating beautiful, functional, 
-              and user-centered digital experiences. With a keen eye for detail and a drive for 
-              excellence, I transform ideas into reality.
+              I'm a competitive programmer and a software engineer who enjoys understanding unqiue and difficult frameworks and projects.
             </p>
             <p>
-              My approach combines creative thinking with technical expertise to deliver solutions 
-              that not only look great but also perform exceptionally.
+              The projects I enjoy the most are ones that make me think about appraoching things from a different angle to combine all the complexe pieces into one simple finale project.
             </p>
           </motion.div>
           <motion.div 
