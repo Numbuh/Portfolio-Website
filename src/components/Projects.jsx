@@ -26,10 +26,10 @@ const Projects = () => {
     {
       title: '',
       description: 'This is a project that takes a sql database and creates a dashboard with the data using d3.js and python.',
-      image: null, // Add your Project3.jpg to public folder if available
+      image: '/Project3.png', // Add your Project3.jpg to public folder if available
       github: 'https://github.com/Numbuh/DatabasesWork',
       live: '',
-      tags: ['TypeScript', 'D3.js', 'Python'],
+      tags: ['SQL', 'D3.js', 'Python'],
       overlay: 'Data visualization dashboard'
     }
   ]
