@@ -33,10 +33,10 @@ const Skills = () => {
     'Vue.js': <SiVuedotjs />,
     'Node.js': <FaNode />,
     'Python': <FaPython />,
-    'MongoDB': <SiMongodb />,
+    //'MongoDB': <SiMongodb />, Not used much anymore.
     'Express.js': <SiExpress />,
     'Git': <FaGitAlt />,
-    'Docker': <FaDocker />,
+    //'Docker': <FaDocker />, Working on it right now.
     'AWS': <FaAws />,
     'Figma': <FaFigma />,
     'Linux': <FaLinux />
@@ -50,11 +50,11 @@ const Skills = () => {
     { name: 'CSS', icon: iconMap['CSS'] },
     { name: 'Node.js', icon: iconMap['Node.js'] },
     { name: 'Python', icon: iconMap['Python'] },
-    { name: 'MongoDB', icon: iconMap['MongoDB'] },
+   // { name: 'MongoDB', icon: iconMap['MongoDB'] },
     { name: 'Express.js', icon: iconMap['Express.js'] },
     { name: 'Git', icon: iconMap['Git'] },
     { name: 'Figma', icon: iconMap['Figma'] },
-    { name: 'Docker', icon: iconMap['Docker'] },
+   // { name: 'Docker', icon: iconMap['Docker'] },
     { name: 'AWS', icon: iconMap['AWS'] },
     { name: 'Linux', icon: iconMap['Linux'] }
   ]
