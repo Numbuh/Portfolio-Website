@@ -6,40 +6,40 @@ import './Experience.css'
 const Experience = () => {
   const experiences = [
     {
-      title: 'Software Developer',
-      company: 'Your Company Name',
-      location: 'Location',
-      period: '2023 - Present',
+      title: 'Intern Support Technician',
+      company: 'Shelter Insurance',
+      location: 'Columbia, MO',
+      period: '2025 - Present',
       description: [
-        'Developed and maintained web applications using modern frameworks',
-        'Collaborated with cross-functional teams to deliver high-quality products',
-        'Implemented responsive designs and optimized application performance'
+        'Restructured inventory management system',
+        'Assisted in the ticketing system while helping end users and prepping bash scripts for admins.',
+        'Created and maintained various bash scripts to automate tasks and improve efficiency.'
       ],
-      technologies: ['React', 'Node.js', 'TypeScript', 'MongoDB']
+      technologies: ['bash', 'SQL', 'WordPress', 'Bash Scripts']
     },
     {
-      title: 'Junior Developer',
-      company: 'Previous Company',
-      location: 'Location',
-      period: '2021 - 2023',
+      title: 'Esports Management',
+      company: 'Columbia College',
+      location: 'Columbia, MO',
+      period: 'July 2024 - August 2025',
       description: [
-        'Built and maintained frontend components',
-        'Participated in code reviews and team meetings',
-        'Learned and applied new technologies'
+        'Managed and organized various esports events and tournaments',
+        'Worked with various software to manage and track esports events and tournaments'
+        
       ],
-      technologies: ['JavaScript', 'HTML/CSS', 'Vue.js']
+      technologies: ['AirTable', 'SQL', 'WordPress']
     },
     {
-      title: 'Freelance Developer',
-      company: 'Self-Employed',
-      location: 'Remote',
-      period: '2020 - 2021',
+      title: 'Data Analyst',
+      company: 'Columbia College',
+      location: 'Columbia, MO',
+      period: 'March 2023 - April 2024',
       description: [
-        'Created custom websites for clients',
-        'Managed project timelines and client communications',
-        'Delivered solutions tailored to client needs'
+        'Worked with various data sources to create reports and dashboards',
+        'Used various tools to analyze data and create reports',
+        'Used various tools to create reports and dashboards'
       ],
-      technologies: ['WordPress', 'PHP', 'JavaScript']
+      technologies: ['Python', 'SQL', 'Tableau']
     }
   ]
 
