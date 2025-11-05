@@ -6,25 +6,25 @@ import './Projects.css'
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack shopping experience with real-time updates',
+      title: 'Pokemon shiny hunting Bot',
+      description: 'This is a bot that will interact with a aws server to find shiny pokemon using a rasberyy pi pico w that is connected to a gamecube and computer over wifi. it will constantly replay various swappable scripts for various modes of play like money farming, shiny hunting and level grinding while using the visual library for python.',
       image: '/Project1.png',
       github: 'https://github.com/Numbuh/GCBot',
       live: '',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      overlay: 'Modern web application with interactive features'
+      tags: ['C++', 'Python', 'AWS'],
+      overlay: 'A discord bot that allows you to play games with your friends and family.'
     },
     {
-      title: 'Task Management App',
-      description: 'Productivity tool with collaborative features',
+      title: 'Pokemon Event Wii Game',
+      description: ' A wii game that can be conencted to a auhtentic Pokemon Emerald cartriage and will put authenic unique pokemon events onto the cart. (The events must be provided by the user.)',
       image: '/Project2.png',
       github: 'https://github.com/Numbuh/EventsWiiGame',
       live: '',
-      tags: ['Vue.js', 'Firebase', 'PWA'],
-      overlay: 'Mobile-first design with smooth animations'
+      tags: ['Assembly', 'git', 'C#'],
+      overlay: 'A wii game that allows you to play pokemon events with your friends and family.'
     },
     {
-      title: 'Analytics Dashboard',
+      title: '',
       description: 'Real-time insights with interactive charts',
       image: null, // Add your Project3.jpg to public folder if available
       github: 'https://github.com/Numbuh/project3',
