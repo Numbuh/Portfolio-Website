@@ -11,21 +11,21 @@ const Experience = () => {
       location: 'Columbia, MO',
       period: '2025 - Present',
       description: [
-        'Restructured inventory management system',
-        'Assisted in the ticketing system while helping end users and prepping bash scripts for admins.',
-        'Created and maintained various bash scripts to automate tasks and improve efficiency.'
+        'I worked through the company’s ServiceNow (SNOW) ticket system to track, troubleshoot, and resolve tech issues for employees across multiple departments.',
+        'I also worked with CI/CD pipelines to help test and deploy internal tools safely, making sure new updates didn’t break existing systems before release. ',
+        'Each day, I handled requests ranging from software installations and password resets to fixing hardware problems like monitors, printers, and docking stations.'
       ],
       technologies: ['bash', 'SQL', 'WordPress', 'Bash Scripts']
     },
     {
-      title: 'Esports Management',
+      title: 'Esports Software Development',
       company: 'Columbia College',
       location: 'Columbia, MO',
       period: 'July 2024 - August 2025',
       description: [
-        'Managed and organized various esports events and tournaments',
-        'Worked with various software to manage and track esports events and tournaments'
-        
+        'I built clean and easy-to-use tournament dashboards using React, making it simple for players and admins to track scores and schedules in real time.',
+        'Behind the scenes, I wrote Python code to handle match logic and update player stats instantly through REST APIs.',
+        'I used Docker to make sure the system ran the same on every computer, and deployed everything on AWS so tournaments could scale without crashing. '
       ],
       technologies: ['AirTable', 'SQL', 'WordPress']
     },
@@ -35,9 +35,9 @@ const Experience = () => {
       location: 'Columbia, MO',
       period: 'March 2023 - April 2024',
       description: [
-        'Worked with various data sources to create reports and dashboards',
-        'Used various tools to analyze data and create reports',
-        'Used various tools to create reports and dashboards'
+        'I managed large sets of student records using SQL and Excel, checking for errors and keeping everything consistent across multiple systems. ',
+        'I built and ran Python scripts to clean data and format it for official reports, saving the team hours of manual entry. ',
+        'To make the whole process smoother, I documented workflows and set up automated checks that caught missing or mismatched data early, helping the college meet every reporting deadline accurately.'
       ],
       technologies: ['Python', 'SQL', 'Tableau']
     }

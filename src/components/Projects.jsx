@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'Pokemon shiny hunting Bot',
-      description: 'This is a bot that will interact with a aws server to find shiny pokemon using a rasberyy pi pico w that is connected to a gamecube and computer over wifi. it will constantly replay various swappable scripts for various modes of play like money farming, shiny hunting and level grinding while using the visual library for python.',
+      description: 'I connected a Raspberry Pi Pico W to a real GameCube controller, writing custom Python scripts that controlled button inputs automatically. Using OpenCV, I taught the program to recognize shiny Pokémon by analyzing colors and patterns on the screen in real time. When a shiny appeared, the Pi used AWS services to send a Discord notification straight to my phone.  ',
       image: '/Project1.png',
       github: 'https://github.com/Numbuh/GCBot',
       live: '',
@@ -24,8 +24,8 @@ const Projects = () => {
       overlay: 'A wii game that allows you to play pokemon events with your friends and family.'
     },
     {
-      title: '',
-      description: 'This is a project that takes a sql database and creates a dashboard with the data using d3.js and python.',
+      title: 'Business Analytics Dashboard',
+      description: 'I designed and managed SQL queries to collect and clean data from multiple sources, combining sales, customer, and operations info into one organized dataset. After preparing the data, I used Python and Pandas to run basic analytics — spotting patterns, averages, and performance trends. The project gave me hands-on experience with data modeling, ETL workflows, and visual storytelling for business use. ',
       image: '/Project3.png', // Add your Project3.jpg to public folder if available
       github: 'https://github.com/Numbuh/DatabasesWork',
       live: '',
